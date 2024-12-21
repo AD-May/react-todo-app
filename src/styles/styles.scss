@@ -1,0 +1,101 @@
+@import 'mixins';
+@import 'variables';
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $background;
+    height: 100%;
+    font-family: $font;
+}
+
+header {
+    @include dimensions(6rem, 100%);
+    margin: 2rem auto 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    h1 {
+        font-size: $header-fontsize;
+        font-weight: 700;
+    }
+    font-size: $header-fontsize;
+}
+
+.react-logo {
+    color: $react-logo-color;
+    font-size: $header-fontsize;
+}
+
+main {
+    height: 32rem;
+}
+
+section {
+    height: 95%;
+    padding: 0 1.4rem;
+}
+
+#todo-header {
+    text-align: center;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+#todo-list {
+    background-color: white;
+    height: 80%;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    padding: 0;
+    overflow-y: scroll;
+}
+
+fieldset {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+#input {
+   padding: 0 0.5rem;
+   border-radius: 5px; 
+}
+
+.item-container {
+    display: flex;
+    align-items: center;
+    padding: 0 0.6rem;
+    border-bottom: 1px solid black;
+    list-style-type: none;
+    @include dimensions(fit-content, 100%);
+    p {
+        display: block;
+        word-wrap: break-word;
+        width: 60%;
+        font-weight: 700;
+        margin: 0;
+        overflow-x: hidden;
+        overflow-y: scroll;
+    }
+    button {
+        margin: 0.2rem;
+        :hover, :focus {
+            cursor: pointer;
+            border: 2px solid black;      
+        }
+    }
+}
+
+#change-input {
+    width: 60%;
+}
+

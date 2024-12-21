@@ -1,0 +1,100 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #e1e1e1;
+  height: 100%;
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  height: 6rem;
+  width: 100%;
+  margin: 2rem auto 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  font-size: 2.4rem;
+}
+header h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+
+.react-logo {
+  color: #61DBFB;
+  font-size: 2.4rem;
+}
+
+main {
+  height: 32rem;
+}
+
+section {
+  height: 95%;
+  padding: 0 1.4rem;
+}
+
+#todo-header {
+  text-align: center;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+#todo-list {
+  background-color: white;
+  height: 80%;
+  border: 2px solid black;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  padding: 0;
+  overflow-y: scroll;
+}
+
+fieldset {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+#input {
+  padding: 0 0.5rem;
+  border-radius: 5px;
+}
+
+.item-container {
+  display: flex;
+  align-items: center;
+  padding: 0 0.6rem;
+  border-bottom: 1px solid black;
+  list-style-type: none;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100%;
+}
+.item-container p {
+  display: block;
+  word-wrap: break-word;
+  width: 60%;
+  font-weight: 700;
+  margin: 0;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+.item-container button {
+  margin: 0.2rem;
+}
+.item-container button :hover, .item-container button :focus {
+  cursor: pointer;
+  border: 2px solid black;
+}
+
+#change-input {
+  width: 60%;
+}/*# sourceMappingURL=styles.css.map */
