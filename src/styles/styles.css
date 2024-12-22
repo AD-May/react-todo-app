@@ -36,11 +36,6 @@ main {
   height: 32rem;
 }
 
-section {
-  height: 95%;
-  padding: 0 1.4rem;
-}
-
 #todo-header {
   text-align: center;
   font-weight: 400;

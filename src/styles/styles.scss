@@ -38,11 +38,6 @@ main {
     height: 32rem;
 }
 
-section {
-    height: 95%;
-    padding: 0 1.4rem;
-}
-
 #todo-header {
     text-align: center;
     font-weight: 400;
@@ -96,7 +91,7 @@ fieldset {
 }
 
 #date {
-    font-size: 10px;
+    font-size: $small-text;
     display: inline-block;
     text-align: right;
 }
@@ -106,7 +101,7 @@ fieldset {
 }
 
 footer {
-    font-size: 10px;
+    font-size: $small-text;
     text-align: center;
     a {
         margin-left: 0.2rem;
