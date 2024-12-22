@@ -1,24 +1,37 @@
 import { useState } from "react";
+import { useEffect } from "react";
 import TodoItem from "./TodoItem.jsx";
 import { Fragment } from "react";
 
 export default function TodoList() {
+
     const [itemName, setItemName] = useState("");
-    const [todos, setTodos] = useState([]);
+
+    /* Upon initial render, sets the todos state to the list in 
+    localStorage if it exists, if not, the todos state is set to 
+    an empty array */
+    const [todos, setTodos] = useState(() => {
+      const storedTodos = localStorage.getItem("storedTodos");
+      return storedTodos ? JSON.parse(storedTodos) : [];
+    });
+    
+    useEffect(() => {
+      localStorage.setItem("storedTodos", JSON.stringify(todos));
+    }, [todos]);
 
     const handleItemAdd = event => {
 
       event.preventDefault();
 
       const newTodos = [
-        ...todos,
+        ...todos,  
         {
           id: todos.length,
           name: itemName,
           completed: false,
         },
       ];
-     
+      
       setTodos(newTodos);
     };
 
@@ -39,7 +52,7 @@ export default function TodoList() {
 
         const newTodos = todos.filter((todo) => todo.id !== id);
 
-        setTodos(newTodos);
+        sortIds(newTodos);
     }
 
     const handleItemEdit = (id, name) => {
@@ -52,20 +65,36 @@ export default function TodoList() {
         });
         
         setTodos(newTodos);
-    } 
+    }
+
+    const sortIds = (unsortedArr) => {
+      const newTodos = unsortedArr.map((todo, index) => {
+        if (todo.id !== index) {
+          return {
+            ...todo,
+            id: index
+          };
+        } else {
+          return todo;
+        };
+      });
+
+      setTodos(newTodos);
+    }
 
     return (
       <>
         <h3 id="todo-header">Things Todo</h3>
         <ul id="todo-list">
-          {todos.map((todo) => {
+          {todos.map((todo, index) => {
             return (
               <TodoItem
-              key={todo.id}
+              key={index}
               todo={todo}
-              onComplete={() => handleItemComplete(todo.id)}
-              onDelete={() => handleItemDelete(todo.id)}
-              onEdit={(name) => handleItemEdit(todo.id, name)}
+              onComplete={() => handleItemComplete(index)}
+              onDelete={() => handleItemDelete(index)}
+              onEdit={(name) => handleItemEdit(index, name)}
+              date={new Date().toDateString()}
             />
             );
           })}

@@ -15,7 +15,7 @@ body {
 
 header {
     @include dimensions(6rem, 100%);
-    margin: 2rem auto 1rem;
+    margin: 1.6rem auto 0.75rem;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -46,7 +46,7 @@ section {
 #todo-header {
     text-align: center;
     font-weight: 400;
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
 }
 
 #todo-list {
@@ -76,14 +76,14 @@ fieldset {
     padding: 0 0.6rem;
     border-bottom: 1px solid black;
     list-style-type: none;
-    @include dimensions(fit-content, 100%);
+    @include dimensions(7.5rem, 100%);
     p {
-        display: block;
         word-wrap: break-word;
+        height: 100%;
         width: 60%;
         font-weight: 700;
         margin: 0;
-        overflow-x: hidden;
+        align-content: center;
         overflow-y: scroll;
     }
     button {
@@ -95,7 +95,21 @@ fieldset {
     }
 }
 
+#date {
+    font-size: 10px;
+    display: inline-block;
+    text-align: right;
+}
+
 #change-input {
     width: 60%;
+}
+
+footer {
+    font-size: 10px;
+    text-align: center;
+    a {
+        margin-left: 0.2rem;
+    }
 }
 

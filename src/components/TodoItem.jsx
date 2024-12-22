@@ -3,7 +3,7 @@ import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import { faX } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 
-export default function TodoItem({ todo, onComplete, onDelete, onEdit}) {
+export default function TodoItem({ todo, onComplete, onDelete, onEdit, date}) {
   const [editing, setEditing] = useState(false);
   const [editedName, setEditedName] = useState(todo.name);
 
@@ -71,6 +71,7 @@ export default function TodoItem({ todo, onComplete, onDelete, onEdit}) {
           Edit
         </button>
       )}
+      <span id="date">Created: {date}</span>
     </li>
   );
 }
