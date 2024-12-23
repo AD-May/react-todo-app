@@ -176,8 +176,10 @@ footer {
 
 @media (min-width: 1200px) {
     #todo-list {
-        width: 40%;
         margin: 1.6rem auto 4.2rem;
+    }
+    .container-fluid {
+        width: 40%;
     }
     main {
         height: 74rem;
