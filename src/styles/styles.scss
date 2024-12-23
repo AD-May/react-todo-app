@@ -15,7 +15,7 @@ body {
 
 header {
     @include dimensions(6rem, 100%);
-    margin: 1.6rem auto 0.75rem;
+    margin: 0.4rem auto 0.4rem;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -112,7 +112,7 @@ footer {
         padding: 1.85rem;
     }
     header {
-        @include dimensions(13rem, 100%);
+        @include dimensions(11rem, 100%);
         gap: 0.85rem;
         h1 {
             font-size: $tablet-header-fontsize;
@@ -122,30 +122,30 @@ footer {
         font-size: $tablet-header-fontsize;
     }
     main {
-       height: 96rem; 
+       height: 60rem; 
     }
     #todo-header {
-        font-size: 2.4rem;
+        font-size: 2rem;
     }
     #todo-list {
-        margin: 1.2rem 6rem 5rem;
+        margin: 1.2rem 2.2rem 3.2rem;
 
     }
     fieldset {
         gap: 1.07rem;
     }
     #input {
-        @include dimensions((calc(1rem * 5.2)), (calc(1rem * 36)));
-        font-size: 2rem;
+        @include dimensions((calc(1rem * 4.2)), (calc(1rem * 29)));
+        font-size: 1.8rem;
     }
     #submit {
-        width: 12rem;
-        font-size: 2rem;
+        width: 10rem;
+        font-size: 1.8rem;
     }
     .item-container {
-        padding: 0 1.3rem;
-        height: 16rem;
-        font-size: 1.75rem;
+        padding: 0 1rem;
+        height: 12rem;
+        font-size: 1.8rem;
         button {
             margin: 0.43rem;
             @include dimensions(4rem, 5rem);
@@ -162,11 +162,12 @@ footer {
         font-size: $tablet-small-text;
     }
     #change-input {
-        height: 5rem;
+        height: 4.2rem;
         margin-right: 5rem;
     }
     footer {
-        font-size: calc($tablet-small-text);
+        margin-top: 1rem;
+        font-size: $tablet-small-text;
         a {
             margin-left: 0.43rem;
         }
@@ -174,12 +175,19 @@ footer {
 }
 
 @media (min-width: 1200px) {
+    #todo-list {
+        width: 40%;
+        margin: 1.6rem auto 4.2rem;
+    }
+    main {
+        height: 74rem;
+    }
     .item-container {
-        font-size: 2.63rem;
+        font-size: 2.2rem;
         button {
-            font-size: 2.63rem;
-            margin: 2.6rem;
-            @include dimensions(6rem, 7.5rem);
+            font-size: 2.2rem;
+            margin: 2.2rem;
+            @include dimensions(5.6rem, 6.9rem);
             svg {
                 @include dimensions(37.5px, 63px);
             }
