@@ -20,7 +20,6 @@ header {
   align-items: center;
   justify-content: center;
   gap: 0.4rem;
-  font-size: 2.4rem;
 }
 header h1 {
   font-size: 2.4rem;
@@ -49,7 +48,7 @@ main {
   border-radius: 5px;
   margin-bottom: 1rem;
   padding: 0;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 fieldset {
@@ -79,7 +78,7 @@ fieldset {
   font-weight: 700;
   margin: 0;
   align-content: center;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 .item-container button {
   margin: 0.2rem;
@@ -105,4 +104,95 @@ footer {
 }
 footer a {
   margin-left: 0.2rem;
+}
+
+@media (min-width: 800px) {
+  .container-fluid {
+    padding: 1.85rem;
+  }
+  header {
+    height: 13rem;
+    width: 100%;
+    gap: 0.85rem;
+  }
+  header h1 {
+    font-size: 5.28rem;
+  }
+  .react-logo {
+    font-size: 5.28rem;
+  }
+  main {
+    height: 96rem;
+  }
+  #todo-header {
+    font-size: 2.4rem;
+  }
+  #todo-list {
+    margin: 1.2rem 6rem 5rem;
+  }
+  fieldset {
+    gap: 1.07rem;
+  }
+  #input {
+    height: 5.2rem;
+    width: 36rem;
+    font-size: 2rem;
+  }
+  #submit {
+    width: 12rem;
+    font-size: 2rem;
+  }
+  .item-container {
+    padding: 0 1.3rem;
+    height: 16rem;
+    font-size: 1.75rem;
+  }
+  .item-container button {
+    margin: 0.43rem;
+    height: 4rem;
+    width: 5rem;
+  }
+  .item-container button svg {
+    height: 25px;
+    width: 42px;
+  }
+  #complete-btn {
+    font-size: 1.2rem !important;
+    line-height: 100%;
+  }
+  #date {
+    font-size: 22px;
+  }
+  #change-input {
+    height: 5rem;
+    margin-right: 5rem;
+  }
+  footer {
+    font-size: 22px;
+  }
+  footer a {
+    margin-left: 0.43rem;
+  }
+}
+@media (min-width: 1200px) {
+  .item-container {
+    font-size: 2.63rem;
+  }
+  .item-container button {
+    font-size: 2.63rem;
+    margin: 2.6rem;
+    height: 6rem;
+    width: 7.5rem;
+  }
+  .item-container button svg {
+    height: 37.5px;
+    width: 63px;
+  }
+  .item-container #complete-btn {
+    font-size: 1.8rem !important;
+    line-height: 100%;
+  }
+  .item-container #date {
+    font-weight: 700;
+  }
 }/*# sourceMappingURL=styles.css.map */
